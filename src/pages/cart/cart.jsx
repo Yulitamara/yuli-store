@@ -4,14 +4,23 @@ import { ShopContext } from "../../context/shop-context";
 import CartItem from "./cart-item";
 import "./cart.css";
 
+import { useNavigate } from "react-router-dom";
+
 const Cart = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
+
+  const navigate = useNavigate();
 
   return (
     <div className="cart">
-      <div>
-        <h1>המוצרים שבחרת</h1>
-      </div>
+      {totalAmount > 0 ? (
+        <div>
+          <h1>סל הקניות שלך</h1>
+        </div>
+      ) : (
+        <h1></h1>
+      )}
       <div className="cartItems">
         {PRODUCTS.map((product) => {
           if (cartItems[product.id] !== 0) {
@@ -19,6 +28,15 @@ const Cart = () => {
           }
         })}
       </div>
+      {totalAmount > 0 ? (
+        <div className="checkout">
+          <p>סה"כ: {totalAmount}₪</p>
+          <button onClick={() => navigate("/")}>חזרה לחנות</button>
+          <button>לתשלום</button>
+        </div>
+      ) : (
+        <h1>סל הקניות שלך ריק</h1>
+      )}
     </div>
   );
 };

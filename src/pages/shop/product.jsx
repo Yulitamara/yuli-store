@@ -14,10 +14,10 @@ const Product = (props) => {
           <b>{productName}</b>
         </p>
         <p>₪{price}</p>
+        <button className="addToCartBtn" onClick={() => addToCart(id)}>
+          הוספה לעגלה {cartItemAmount > 0 && <>({cartItemAmount})</>}
+        </button>
       </div>
-      <button className="addToCartBtn" onClick={() => addToCart(id)}>
-        Add To Cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
-      </button>
     </div>
   );
 };

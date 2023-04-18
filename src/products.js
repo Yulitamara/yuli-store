@@ -8,17 +8,20 @@ export const PRODUCTS = [
     productName: "פרינט",
     price: 35,
     productImage: product1,
+    productSize: "13*13",
   },
   {
     id: 2,
     productName: "מדבקה",
     price: 5,
     productImage: product2,
+    productSize: "8*8",
   },
   {
     id: 3,
     productName: "פרינט",
     price: 45,
     productImage: product3,
+    productSize: "15*15",
   },
 ];
