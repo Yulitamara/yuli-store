@@ -3,24 +3,29 @@
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: #C0D3FD;
-  display: flex;
-  justify-content: flex;
-  align-items: center;
+  background-color: #f7f7ff;
+  /* display: flex;
+  align-items: center; */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .links {
-  margin-right: 50px;
+  margin: 0 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .links a {
   text-decoration: none;
   color: #1d3058;
   font-size: 25px;
+}
+.links img {
+  width: 140px;
 }
 .shoppingcart {
   margin-top: 10px;

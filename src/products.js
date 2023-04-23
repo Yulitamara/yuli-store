@@ -24,4 +24,25 @@ export const PRODUCTS = [
     productImage: product3,
     productSize: "15*15",
   },
+  {
+    id: 4,
+    productName: "פרינט",
+    price: 45,
+    productImage: product3,
+    productSize: "15*15",
+  },
+  {
+    id: 5,
+    productName: "פרינט",
+    price: 45,
+    productImage: product3,
+    productSize: "15*15",
+  },
+  {
+    id: 6,
+    productName: "פרינט",
+    price: 45,
+    productImage: product3,
+    productSize: "15*15",
+  },
 ];

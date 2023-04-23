@@ -1,9 +1,11 @@
 .cart {
-  margin-top: 100px;
+  background-color: #f7f7ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 .cart h1 {
@@ -29,7 +31,6 @@
   align-items: center;
   padding: 20px;
   margin-top: 30px;
-  background-color: #f9ea9a;
 }
 
 .cartItem img {
@@ -37,7 +38,7 @@
 }
 
 .cartItem .right {
-  font-size: 25px;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   gap: 35px;
@@ -49,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem;
+  padding: 0.5rem;
 }
 .countHandler input {
   width: 40px;
@@ -65,7 +66,7 @@
 }
 
 .cartItem .left {
-  font-size: 20px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 35px;
@@ -73,7 +74,7 @@
 }
 
 .product-size {
-  font-size: 15px;
+  font-size: 1rem;
 }
 .checkout p {
   text-align: center;
@@ -82,15 +83,22 @@
   font-size: 1.3rem;
   color: #000000;
 }
-.checkout button {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(244, 113, 113);
-  color: white;
-  border: none;
-  margin: 10px;
-  font-size: 1.3rem;
+.btn-second {
   cursor: pointer;
+  margin: 10px;
+  background-color: #ececec;
+  min-width: 120px;
+  padding: 10px 5px;
+  border-radius: 2px;
+  color: #2b4759;
+  font-size: 1rem;
+  height: 50px;
+  line-height: 46px;
+  outline: none;
+  padding: 0;
+  background-color: #2b4759;
+  border: 1px solid #2b4759;
+  color: #f7f7ff;
 }
 
 @media only screen and (max-width: 760px) {

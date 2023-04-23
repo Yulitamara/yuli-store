@@ -2,8 +2,9 @@
   margin-top: 80px;
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
 .header img {
-  width: 280px;
+  width: 200px;
 }

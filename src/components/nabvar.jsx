@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "./navbar.css";
+import buy from "../assets/buy.png";
 
 export const Navbar = () => {
   return (
@@ -9,7 +10,9 @@ export const Navbar = () => {
         <Link to="/cart">
           <ShoppingCart size={32} className="shoppingcart" />
         </Link>
-        <Link to="/"> חנות </Link>
+        <Link to="/">
+          <img src={buy} alt="" />
+        </Link>
       </div>
     </div>
   );

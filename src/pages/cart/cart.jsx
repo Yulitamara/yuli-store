@@ -31,8 +31,10 @@ const Cart = () => {
       {totalAmount > 0 ? (
         <div className="checkout">
           <p>סה"כ: {totalAmount}₪</p>
-          <button onClick={() => navigate("/")}>חזרה לחנות</button>
-          <button>לתשלום</button>
+          <button className="btn-first" onClick={() => navigate("/")}>
+            חזרה לחנות
+          </button>
+          <button className="btn-second">לתשלום</button>
         </div>
       ) : (
         <h1>סל הקניות שלך ריק</h1>
