@@ -37,7 +37,12 @@ const Cart = () => {
           <button className="btn-second">לתשלום</button>
         </div>
       ) : (
-        <h1>סל הקניות שלך ריק</h1>
+        <div className="empty">
+          <h1>סל הקניות שלך ריק</h1>
+          <button className="btn-first" onClick={() => navigate("/")}>
+            חזרה לחנות
+          </button>
+        </div>
       )}
     </div>
   );

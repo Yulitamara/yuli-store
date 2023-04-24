@@ -101,6 +101,12 @@
   color: #f7f7ff;
 }
 
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 @media only screen and (max-width: 760px) {
   .cartItem {
     flex-direction: column-reverse;
