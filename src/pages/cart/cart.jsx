@@ -1,16 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import CartItem from "./cart-item";
 import "./cart.css";
 
 import { useNavigate } from "react-router-dom";
+import PayPal from "../../components/paypal";
 
 const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
 
   const navigate = useNavigate();
+
+  const [checkout, setCheckout] = useState(false);
 
   return (
     <div className="cart">
@@ -34,7 +37,18 @@ const Cart = () => {
           <button className="btn-first" onClick={() => navigate("/")}>
             חזרה לחנות
           </button>
-          <button className="btn-second">לתשלום</button>
+          {checkout ? (
+            <PayPal/>
+          ) : (
+            <button
+              className="btn-second"
+              onClick={() => {
+                setCheckout(true);
+              }}
+            >
+              לתשלום
+            </button>
+          )}
         </div>
       ) : (
         <div className="empty">
